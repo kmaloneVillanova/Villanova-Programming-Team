@@ -4,13 +4,13 @@
 # as the skill level increases, more problems can be solved
 
 import sys
-# read in test case
+# read in test file
 sys.stdin = open('training.txt','r')
 
-# read in number of numbers on wheel
+# read in n = number of problems, s = skill level
 n, s = map(int, sys.stdin.readline().split())
-level = 0
-# read in numbers
+
+# read in n upper and lower bounds
 for i in range(n):
     l, u = map(int, sys.stdin.readline().split())
     if s >=l and s<=u:
