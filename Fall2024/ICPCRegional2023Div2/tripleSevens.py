@@ -2,16 +2,21 @@
 
 import sys
 # read in test case
-#sys.stdin = open('tripleSevens.txt','r')
+sys.stdin = open('tripleSevens.txt','r')
 
-# read in number of numbers on wheel
+# read in number of numbers on the three wheels
 n = int(sys.stdin.readline())
 output = 777
-# read in numbers
+
+# read in numbers on each wheel
+# since we know there are three wheels, we could read in the three lines
+# or we can use a loop which will read in a line until there is no more input
 for line in sys.stdin:
-    line=line.strip()
-    line=line.split()
-    nums=[int(i) for i in line]#
+    # read in the numbers and store in nums
+    nums = map(int, line.strip().split())
+    # must convert nums to a list
+    nums = list(nums)
+    # check each list for a 7
     hasSeven=False
     for i in nums:
         if i == 7:
