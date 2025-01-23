@@ -18,7 +18,7 @@ bats=[int(x) for x in sys.stdin.readline().split()]
 # use this to read in integers line by line and store them in a list
 lst=[]
 for _ in range(n):
-    lst.append(sys.stdin.readline())
+    lst.append(int(sys.stdin.readline()))
 
 # use this if there is no known end to the input
 for line in sys.stdin:
